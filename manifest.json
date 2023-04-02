@@ -1,0 +1,21 @@
+{
+  "name": "Xweb2PDF",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Converts the current active tab in the Chrome browser into a PDF document.",
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Convert Webpage to PDF",
+    "default_popup": "index.html"
+  }
+}
